@@ -52,7 +52,7 @@ class KnightPathFinder
       @grid = Array.new(8) {Array.new(8)}
       @pos = pos
       @considered_positions = [@pos]#array containing just the starting position
-      #calls build_move_tree
+      self.build_move_tree
   end
 
   def new_move_positions(pos) #2
@@ -76,14 +76,21 @@ class KnightPathFinder
       end
     end
   end
-      #make children for each possible position and the root node is the parent
 
-    
-      # while queue.length > 0
-      #     first_node = queue.shift
-      #     return first_node if first_node.value == target_value
-      #     queue.concat(first_node.children)
-      # end
+  def find_path(end_pos)
+    node = @root_node.dfs(end_pos)
+    trace_path_back(end_pos, node)
+  end
+
+  def trace_path_back(end_pos, node)
+    path = [end_pos]
+    current_node = node #node that has the end_position
+    until path[0] == @root_node.value
+      current_node = current_node.parent
+      path.unshift(current_node.value)
+    end
+    path
+  end
 
 
   # def find_path
@@ -96,6 +103,9 @@ class KnightPathFinder
   # end
 end
 kpf = KnightPathFinder.new([0, 0])
-# kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
-# kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
-# 
+p kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
+p kpf.find_path([1, 2]) # => [[0, 0], [1, 2]]
+p kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+
+p kpf.find_path([7, 6]) # => [[0, 0], [1, 2], [2, 4], [3, 6], [5, 5], [7, 6]]
+p kpf.find_path([6, 2]) # => [[0, 0], [1, 2], [2, 0], [4, 1], [6, 2]]
