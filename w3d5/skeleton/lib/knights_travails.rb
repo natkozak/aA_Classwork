@@ -17,7 +17,7 @@ require_relative '00_tree_node.rb'
 
 
 class KnightPathFinder
-  attr_reader :root_node
+  attr_reader :root_node, :considered_positions
 
   #Start by creating an instance variable, self.root_node that stores the knight's initial position in an instance of your PolyTreeNode class.
   # def self.root_node #why did they tell us to make an instance variable called self.root_node?? doesn't that need a getter?? 
@@ -40,7 +40,7 @@ class KnightPathFinder
       new_pos = []
       new_pos << pos[0] + move[0] 
       new_pos << pos[1] + move[1] 
-      if new_pos[0] >= 0 && new_pos[0] < 9 && new_pos[1] >= 0 && new_pos[1] < 9
+      if new_pos[0] >= 0 && new_pos[0] < 8 && new_pos[1] >= 0 && new_pos[1] < 8
         valid_moves << new_pos
       end
     end
@@ -62,35 +62,40 @@ class KnightPathFinder
     not_considered
   end
 
-  def build_move_tree(pos)
+  def build_move_tree
     #builds the move tree, beginning with self.root_node
     queue = []
     queue << @root_node
-    new_moves = new_move_positions(pos)
-    new_moves.each do |new_move|
-      new_move_node = PolyTreeNode.new(new_move)
-      new_move_node.parent=(@root_node)
+    while queue.length > 0
+      top_queue = queue.shift
+      new_moves = new_move_positions(top_queue.value)
+      new_moves.each do |new_move|
+        new_move_node = PolyTreeNode.new(new_move)
+        new_move_node.parent=(top_queue)
+        queue << new_move_node
+      end
     end
+  end
       #make children for each possible position and the root node is the parent
 
-    end
-      while queue.length > 0
-          first_node = queue.shift
-          return first_node if first_node.value == target_value
-          queue.concat(first_node.children)
-      end
-  end
+    
+      # while queue.length > 0
+      #     first_node = queue.shift
+      #     return first_node if first_node.value == target_value
+      #     queue.concat(first_node.children)
+      # end
 
-  def find_path
-    #use to traverse move tree -- don't write yet.
-  end
 
-  def =(pos)
-    row, col = pos
-    @grid[row][col]
-  end
+  # def find_path
+  #   #use to traverse move tree -- don't write yet.
+  # end
+
+  # def =(pos)
+  #   row, col = pos
+  #   @grid[row][col]
+  # end
 end
-
 kpf = KnightPathFinder.new([0, 0])
-kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
-kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+# kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
+# kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+# 
