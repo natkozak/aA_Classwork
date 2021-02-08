@@ -11,7 +11,7 @@ class PolyTreeNode
 
     def parent=(new_parent)
         #unless condition == if !condition
-        unless self.parent == nil
+        if !(self.parent == nil)
             old_parent_children = self.parent.children
             old_parent_children.delete(self)
         end

@@ -29,18 +29,18 @@ class KnightPathFinder
     @possible_moves = [ #first elt is horizontal movement, second elt is vertical movement
       [-1, 2],
       [-1,-2],
-      [-2, 1]
-      [-2,-1]
+      [-2, 1],
+      [-2,-1],
       [1, 2],
-      [1, -2]
-      [2, 1]
+      [1, -2],
+      [2, 1],
       [2, -1]
     ]
     @possible_moves.each do |move|
       new_pos = []
       new_pos << pos[0] + move[0] 
       new_pos << pos[1] + move[1] 
-      if new_pos[0] > 0 && new_pos[0] < 8 && new_pos[1] > 0 && new_pos[1] < 8
+      if new_pos[0] >= 0 && new_pos[0] < 9 && new_pos[1] >= 0 && new_pos[1] < 9
         valid_moves << new_pos
       end
     end
