@@ -31,11 +31,10 @@ class TicTacToeNode
       (0...3).each do |col|
         if @board.empty?([row, col])
           board_dup = @board.dup
-          board_dup[row, col] = self.next_mover_mark
+          #board_dup[row, col] = self.next_mover_mark
           node = TicTacToeNode.new(board_dup, other_mark, [row, col])
           kids << node
         end
-      
       end
     end
     kids
