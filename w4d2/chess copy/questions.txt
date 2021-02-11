@@ -1,0 +1,43 @@
+"and nil where the NullPiece will start." vs.
+"Null pieces (occupy the 'empty' spaces)"
+
+What does this mean??? 
+does the entire board get covered in nullPieces?
+    and normal pieces replace for appropriate positions?
+
+Yes, in a refactor
+
+OR: does the board get initialized with the pieces in the right locations?
+
+Yes, in a refactor
+
+Why do they tell us to only initalize one NullPiece instance?
+
+do we have to implement all of the movement behavior for all pieces to finish Phase 1?
+
+No.
+
+
+-----------------------
+
+
+Do you get back Piece instances where you expect to? YES
+Test out Board#move_piece(start_pos, end_pos), does it raise an error when there is no piece at the start? YES
+Does it successfully update the Board? YES
+
+NOTE: if we say rooks.is_a?(Piece). Would return true
+
+
+empty board, one rook
+place on the board in the middle
+>make sure it has seven potential moves in one direction, seven in another
+>place a piece of the opposing color in its way
+>make sure the rook is able to capture that piece
+>place a piece of their own color on the board
+>make sure that position occupied by the same color piece is not in possible moves
+
+do tests again but put rook in the middle
+
+then test the knight and the king
+
+populating with all correct pieces at the end

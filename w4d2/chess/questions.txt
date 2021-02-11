@@ -1,0 +1,18 @@
+"and nil where the NullPiece will start." vs.
+"Null pieces (occupy the 'empty' spaces)"
+
+What does this mean??? 
+does the entire board get covered in nullPieces? 
+    and normal pieces replace for appropriate positions?
+
+OR: does the board get initialized with the pieces in the right locations?
+
+Why do they tell us to only initalize one NullPiece instance?
+
+do we have to implement all of the movement behavior for all pieces to finish Phase 1?
+
+
+
+TODOS:
+change @grid in initialize to self
+implement the array constants in the modules
