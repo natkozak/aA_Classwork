@@ -53,26 +53,24 @@ class TowersOfHanoi
   attr_accessor :rods
 
   def initialize
-    @rods = Array.new(3) {Array.new(3)}
+    @rods = Array.new(3) { Array.new }
     @rods[0] = [3,2,1]
   end
 
   def prompt
-    print "Please enter a starting rod and an ending rod"
-    input = gets.chomp.split.map(:to_i)
+    unless won?
+      puts "Please enter the rod you want to move from"
+      from = gets.chomp
+      puts "Please enter the rod you want to move to"
+      to = gets.chomp
+      move(from, to)
+    end
   end
 
-  def move
-    unless won?
-      begin
-        input = prompt
-        input.each do |i|
-          @rods[i].pop 
-        end
-      rescue InputError
-        retry
-      end
-    end
+  def move(from, to)
+    raise "Can't move from empty rod" if rods[from].empty?
+    raise "Can't put larger disc on this rod" if !rods[to].empty? && rods[from].last > rods[to].last 
+    rods[to] << rods[from].pop
   end
 
   def won?

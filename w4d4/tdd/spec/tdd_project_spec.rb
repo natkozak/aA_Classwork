@@ -102,6 +102,15 @@ describe TowersOfHanoi do
   end
 
   describe "#move" do
-    it "should contain the main game loop"
+    it "should mutate @rods" do
+      tower.move(0, 1)
+
+      expect(tower.rods[0]).to eq([3, 2])
+      expect(tower.rods[1]).to eq([1])
+
+      tower.move(0, 2)
+      expect(tower.rods[0]).to eq([3])
+    end
   end
+
 end
