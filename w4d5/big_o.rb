@@ -52,18 +52,20 @@ end
 
 def largest_contiguous(array)
   subs = []
-  (0...array.length).each do |start_idx|
-    (start_idx...array.length).each do |end_idx|
-      subs << array[start_idx..end_idx]
+  (0...array.length).each do |start_idx| #n
+    (start_idx...array.length).each do |end_idx| #n * 1/2
+      subs << array[start_idx..end_idx] #when grabbing subarr using range, this is another n
     end
   end
   p subs
   largest_sum = nil
-  subs.each do |sub|
-    largest_sum = sub.sum if largest_sum.nil? || sub.sum > largest_sum
+  subs.each do |sub| #n^2
+    largest_sum = sub.sum if largest_sum.nil? || sub.sum > largest_sum #.sum is doing another n, becoming n^3 = n * n2
   end
   largest_sum
 end
+
+#tetrahedron 
 
 # p largest_contiguous([5,3,-7]) #8
 # p largest_contiguous([1,5,3,-7]) #9
