@@ -4,7 +4,7 @@ body {
   /* If the user cannot load the Arial font, the sans-serif font is used */
   font-family: Arial, sans-serif;
   background-color: #FEFFF1;
-  width: 900px
+  width: 900px;
   margin: 0 auto;
 }
 
