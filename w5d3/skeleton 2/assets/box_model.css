@@ -43,6 +43,14 @@ nav {
 
   /* The list style property is shorthand for multiple list-style properties*/
   list-style: square inside;
+ 
+}
+.ingredients-list li {
+  margin: 15px 0px;
+}
+
+ol li {
+  margin: 15px 0px;
 }
 
 ol {
@@ -87,6 +95,7 @@ h2 + .user_review {
 nav ul li {
   display: inline-block;
   padding: 20px;
+  
 }
 
 section {
