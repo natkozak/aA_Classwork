@@ -62,6 +62,10 @@ ol {
   font-weight: bold;
 }
 
+#review-form {
+  display: flex;
+}
+
 input[type="radio"] {
     -webkit-appearance: none;
     width: 27px;
