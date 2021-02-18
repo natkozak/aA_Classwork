@@ -68,17 +68,6 @@ CREATE TABLE reply_likes (
 );
 
 
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO 
   users (fname, lname)
 VALUES
