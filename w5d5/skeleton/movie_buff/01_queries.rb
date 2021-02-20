@@ -5,7 +5,7 @@
 #  id          :integer      not null, primary key
 #  name        :string
 #
-# Table name: movies
+# Table name: movienbs
 #
 #  id          :integer      not null, primary key
 #  title       :string
