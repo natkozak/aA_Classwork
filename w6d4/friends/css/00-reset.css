@@ -1,0 +1,64 @@
+/* PHASE 0: Reset */
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  /* given */
+  box-sizing: inherit;
+
+  /* four box properties get 0px  */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: inherit;
+
+  font-size: 100%;
+  vertical-align: baseline;
+  font: inherit;
+
+
+  color: inherit;
+  background: inherit;
+  text-align: inherit;
+
+
+
+
+}
+
+ul {
+
+  list-style: none;
+  
+}
+
+img {
+  display: block;
+
+    /*expand to the full 100% width of the parent container */
+  width: 100%;
+
+    /* height grow auto, which means proportionally */
+  height: auto;
+
+
+
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}

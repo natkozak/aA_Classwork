@@ -1,0 +1,50 @@
+/* PHASE 1: Header */
+
+body {
+  font-weight: default;
+  font-family: default;
+  font-size: default;
+}
+
+.header {
+  background: red;
+  /* display: flex; */
+  text-align: center;
+}
+
+.header-nav {
+  display: flex;
+  background: orange;
+  margin: 0 auto;
+  
+  justify-content: space-around;
+  
+}
+
+.header-logo {
+  background: yellow;
+  padding: 10px 10px 10px 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.header-list {
+  display: flex;
+  flex-direction: row;
+  background: green;
+  
+}
+
+.header-list li {
+  display: flex;
+  flex-direction: row;
+  background: green;
+}
+
+a {
+  display: block;
+  padding: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  
+}
