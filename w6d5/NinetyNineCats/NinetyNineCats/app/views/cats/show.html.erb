@@ -1,16 +1,26 @@
-
+<h1> <%= @catt.name %> </h1>
 
 <table>
-    <thead>
+    <tbody>
         <tr>
             <th>Attribute</th>
             <th>Value</th>
         </tr>
-    </thead>
-    <tbody>
         <tr>
             <td>Age</td> 
             <td><%= @catt.age %></td>
+        </tr>
+        <tr>
+            <td>Birth_Date</td> 
+            <td><%= @catt.birth_date %></td>
+        </tr>
+        <tr>
+            <td>Color</td> 
+            <td><%= @catt.color %></td>
+        </tr>
+        <tr>
+            <td>Sex</td> 
+            <td><%= @catt.sex %></td>
         </tr>
     </tbody>
 </table>
