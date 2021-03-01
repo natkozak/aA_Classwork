@@ -27,6 +27,9 @@ class Cat < ApplicationRecord
     age = current.year - birth.year
   end
 
-
+   has_many :requests,
+        foreign_key: :cat_id,
+        class_name: :CatRentalRequest,
+        dependent: :destroy
 
 end
