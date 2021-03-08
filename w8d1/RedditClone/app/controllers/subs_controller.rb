@@ -27,8 +27,10 @@ class SubsController < ApplicationController
 
   def create
     @sub = Sub.new(sub_params)
-    @sub.owner_id = current_user.id
-    #@sub.owner_id = params[:user_id] only if nested
+     @sub.owner_id = current_user.id
+  
+    
+
     if @sub.save
       redirect_to user_url(@sub.owner_id)
     else
