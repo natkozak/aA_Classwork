@@ -1,29 +1,29 @@
 class PostsController < ApplicationController
 
-  def new
-    @post = Post.new
-    render :new
-  end
+  # def new
+  #   @post = Post.new
+  #   render :new
+  # end
 
   def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
     @post.sub_id = params[:sub_id]
     if @post.save
-      redirect_to :show
+      redirect_to sub_post_url(@post.sub_id, @post.id)
     else
       flash.now[:errors] = @post.errors.full_messages
-      render :new
+      render sub_url(@post.sub_id)
     end
   end
 
   def edit #only post author can use this
-    @post = Post.find_by(params[:id])
+    @post = Post.find_by(id: params[:id])
     render :edit if current_user.id == @post.owner_id
   end
 
   def update #only post author can use this
-    @post = Post.find_by(params[:id])
+    @post = Post.find_by(id: params[:id])
     if current_user.id == @post.owner_id && @post.update(post_params)
       redirect_to :show
     else
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(params[:id])
+    @post = Post.find_by(id: params[:id])
     render :show
   end
 

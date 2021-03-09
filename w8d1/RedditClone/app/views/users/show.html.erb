@@ -1,5 +1,18 @@
-<h1><%= @user.username %></h1>'s fancy show page! 
+<h1>welcome, <%= @user.username %> !</h1>
 
+<em><%= @user.username %>'s subs:</em>
 
+<ul>
+<% @user.subs.each do |sub| %>
+<li> 
 
+  <a href="<%= sub_url(sub) %>"> <%= sub.title %>  </a>
+  <br>
+  <%= sub.description %> 
+  <br>
+</li>
+<% end %>
+</ul>
+
+<a href="<%= new_user_sub_url(@user) %>">Create a new sub!</a>
 

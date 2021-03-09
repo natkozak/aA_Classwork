@@ -1,3 +1,6 @@
+<a href="<%= user_url(current_user) %>">Back to your subs.</a>
+
+
 <h1>Create a new sub</h1> 
 <form action="<%= subs_url %>" method="POST">
 
@@ -8,7 +11,7 @@
 </label>
 
 <label> Description:
-<input type="text" name="sub[description]" value="">
+<textarea name="sub[description]"></textarea>
 </label>
 
 <input type="submit" value="Create Sub">
