@@ -105,6 +105,35 @@ Board.prototype.isOccupied = function (pos) {
  * Returns empty array if no pieces of the opposite color are found.
  */
 Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
+  // use Board.DIRS
+  // does it need to be recursive?
+
+  // base cases:
+  // returns empty array when pos is not on the board'
+  // returns empty array when there is a blank space one position away from the current position
+  // returns empty array if no pieces of the opposite color are found
+  let arr = [];
+  let nextPos = [pos[0] + dir[0], pos[1] + dir[1]];
+  while (this.isValidPos(nextPos) && 
+         this.getPiece(nextPos) != undefined && 
+         this.getPiece(nextPos).color != color) 
+         {
+    // if (!this.isValidPos(pos) || this.getPiece(pos) === undefined) {
+    //   return [];
+    // } else if (this.getPiece(pos).color != color) {
+    //   let arr = [this.getPiece(pos)];
+    //   return arr;
+    // }
+    // take the next postion in that direction and add it to our empty array
+    arr.push(this.getPiece(nextPos));
+    nextPos = [nextPos[0] + dir[0], nextPos[1] + dir[1]];
+    
+  }
+  return arr;
+
+  // iterative step:
+  // returns positions for longer horizontal and vertical cases
+  // returns positions for longer diagonal cases
 };
 
 /**
