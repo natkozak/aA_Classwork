@@ -30,7 +30,11 @@ Piece.prototype.flip = function () {
  * based on its color.
  */
 Piece.prototype.toString = function () {
-
+    if (this.color === "white") {
+        return "W";
+    } else if (this.color === "black") {
+        return "B";
+    }
 };
 
 // DON'T TOUCH THIS CODE
