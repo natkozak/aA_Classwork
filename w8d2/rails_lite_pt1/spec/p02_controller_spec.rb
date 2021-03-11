@@ -1,5 +1,6 @@
 require 'rack'
 require 'controller_base'
+require 'byebug'
 
 describe ControllerBase do
   before(:all) do
@@ -16,10 +17,13 @@ describe ControllerBase do
 
   describe '#render_content' do
     before(:each) do
+      #debugger
       users_controller.render_content 'somebody', 'text/html'
+      #debugger
     end
 
     it 'sets the response content type' do
+      
       expect(res['Content-Type']).to eq('text/html')
     end
 
