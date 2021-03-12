@@ -9,11 +9,15 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  // let grid = new Array(8).fill(0).map (ele => new Array(8));
   let grid = new Array(8);
-  grid.forEach( function(ele){
-      ele = new Array(8);
+    for (i = 0; i < grid.length; i++) {
+      grid[i] = new Array(8);
     }
-  )
+  // let grid = grid.map( function(ele){
+  //     ele = new Array(8);
+  //   }
+  // debugger
   grid[3][4] = new Piece('black');
   grid[4][3] = new Piece('black');
   grid[3][3] = new Piece('white');
@@ -57,13 +61,11 @@ Board.prototype.isValidPos = function (pos) {
  * throwing an Error if the position is invalid.
  */
 Board.prototype.getPiece = function (pos) {
-    if (this.grid[pos[0]][pos[1]] instanceof Piece) {
-      return this.grid[pos[0]][pos[1]];
-    } else if (!this.isValidPos(pos)) {
-      return new Error('Not valid pos!');
-    } else {
-      return undefined;
-    }
+  if (!this.isValidPos(pos)) {
+    throw new Error('Not valid pos!');
+  } else {
+    return this.grid[pos[0]][pos[1]];
+  }
 };
 
 /**
@@ -72,7 +74,7 @@ Board.prototype.getPiece = function (pos) {
  */
 Board.prototype.isMine = function (pos, color) {
   let piece = this.getPiece(pos);
-  if (piece.color === color) {
+  if (piece && piece.color === color) {
     return true;
   } else {
     return false;
@@ -84,7 +86,7 @@ Board.prototype.isMine = function (pos, color) {
  * Checks if a given position has a piece on it.
  */
 Board.prototype.isOccupied = function (pos) {
-  if (this.getPiece === undefined) {
+  if (this.getPiece(pos) === undefined) {
     return false;
   } else {
     return true;
@@ -104,7 +106,25 @@ Board.prototype.isOccupied = function (pos) {
  *
  * Returns empty array if no pieces of the opposite color are found.
  */
-Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
+Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip = []){
+  
+  let arr = [];
+  let nextPos = [pos[0] + dir[0], pos[1] + dir[1]];
+  if (!this.isValidPos(nextPos)){
+    return [];
+  } else if (!this.getPiece(nextPos)) {
+    return [];
+  } else if (this.getPiece(nextPos).color === color) {
+    return piecesToFlip;
+  } else {
+    piecesToFlip.concat(nextPos);
+    return arr.concat(this._positionsToFlip(nextPos, color, dir, piecesToFlip));
+  }
+
+
+  
+  
+  
   // use Board.DIRS
   // does it need to be recursive?
 
@@ -112,12 +132,18 @@ Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
   // returns empty array when pos is not on the board'
   // returns empty array when there is a blank space one position away from the current position
   // returns empty array if no pieces of the opposite color are found
-  let arr = [];
-  let nextPos = [pos[0] + dir[0], pos[1] + dir[1]];
-  while (this.isValidPos(nextPos) && 
-         this.getPiece(nextPos) != undefined && 
-         this.getPiece(nextPos).color != color) 
-         {
+
+
+
+
+
+
+                  // let arr = [];
+                  // let nextPos = [pos[0] + dir[0], pos[1] + dir[1]];
+                  // while (this.isValidPos(nextPos) && 
+                  //        this.getPiece(nextPos) != undefined && 
+                  //        this.getPiece(nextPos).color != color) 
+                  //        {
     // if (!this.isValidPos(pos) || this.getPiece(pos) === undefined) {
     //   return [];
     // } else if (this.getPiece(pos).color != color) {
@@ -125,11 +151,12 @@ Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
     //   return arr;
     // }
     // take the next postion in that direction and add it to our empty array
-    arr.push(this.getPiece(nextPos));
-    nextPos = [nextPos[0] + dir[0], nextPos[1] + dir[1]];
+
+                  // arr.push(this.getPiece(nextPos));
+                  // nextPos = [nextPos[0] + dir[0], nextPos[1] + dir[1]];
     
-  }
-  return arr;
+  // }
+  // return arr;
 
   // iterative step:
   // returns positions for longer horizontal and vertical cases
