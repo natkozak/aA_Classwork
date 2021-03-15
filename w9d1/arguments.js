@@ -118,5 +118,59 @@ function curriedSum(numArgs) {
   // return _curriedSum;
 }
 
-const currySum = curriedSum(4);
-console.log(currySum(5)(30)(20)(1)); // => 56
+// const currySum = curriedSum(4);
+// console.log(currySum(5)(30)(20)(1)); // => 56
+
+
+
+
+
+// version that uses Function.prototype.apply
+Function.prototype.curry = function(numArgs) {
+  const that = this;
+  const args = [];
+
+  return function _curry(arg) {
+    args.push(arg)
+    if (args.length === numArgs) {
+      // Using Function.prototype.apply:
+      // null tells them you're not going to change the default context at all
+      // using apply to call sumFunction (the instance of the Function object)
+      // return that.apply(null, args); 
+
+
+      // Using the spread operator (same result as line 139):
+      return that(...args);
+    } else {
+      return _curry;
+    }
+  }
+
+  // If there are too few arguments still, it should return itself.
+
+  // When there are numArgs arguments, it should "call the original function".
+
+}
+
+const sumFunction = function(...args) {
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  return sum;
+}
+
+const currySumFunction = sumFunction.curry(5);
+console.log(currySumFunction(1)(2)(3)(4)(5)); // 15
+
+
+
+// and another one that uses ... (the spread operator).
+Function.prototype.curry = function (numArgs) {
+  // Collect up arguments until there are numArgs of them,
+
+  //   If there are too few arguments still, it should return itself.
+
+  // When there are numArgs arguments, it should call the original function.
+
+}
