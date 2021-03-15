@@ -57,12 +57,23 @@ console.log(markov.says("meow", "Ned"));
 
 //First reason we want to monkey patch: mimicking behavior of the built-in bind function 
 //Calling it on an instance of a function
-Function.prototype.myBind = function(newContext) {
-  let args = Array.from(arguments).slice(1);
+// Function.prototype.myBind = function(newContext) {
+//   let args = Array.from(arguments).slice(1);
+//   const that = this; // "that" will refer to the function we're calling it on.
+//   return function() {
+//     let call_args = Array.from(arguments); // don't need to slice, because when someone calls the bound function, they will never pass in the context.
+//     args = args.concat(call_args);
+//     return that.apply(newContext, args);
+//   }
+// } 
+
+
+Function.prototype.myBind = function(newContext, ...args) {
+  
   const that = this; // "that" will refer to the function we're calling it on.
-  return function() {
-    let call_args = Array.from(arguments); // don't need to slice, because when someone calls the bound function, they will never pass in the context.
-    args = args.concat(call_args);
+  return function(...callArgs) {
+    // don't need to slice, because when someone calls the bound function, they will never pass in the context.
+    args = args.concat(callArgs);
     return that.apply(newContext, args);
   }
 } 
@@ -87,3 +98,25 @@ const notMarkovSays = markov.says.myBind(pavlov);
 notMarkovSays("meow", "me");
 // Pavlov says meow to me!
 // true
+
+
+
+function curriedSum(numArgs) {
+  const numbers = [];
+  return function _curriedSum(num) {
+    numbers.push(num)
+    if (numbers.length === numArgs) { 
+        let sum = 0;
+        for(let i = 0; i < numArgs; i++) {
+          sum += numbers[i];
+        }
+        return sum;
+    } else {
+      return _curriedSum;
+    }
+  }
+  // return _curriedSum;
+}
+
+const currySum = curriedSum(4);
+console.log(currySum(5)(30)(20)(1)); // => 56
