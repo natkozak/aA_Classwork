@@ -10,9 +10,15 @@ class View {
   setupBoard(el) {
     // it should make a grid to represent the board. Build the grid using an unordered list (<ul>). 
     let newUL = $('<ul></ul>');
-    let newLI = $('<li>A</li>');
+    //let newLI = $('<li>A</li>');
     // let body = $('body');
-    // el.append(newUL).append(newLI);
+    el.append(newUL);
+
+    for(let i=0; i<9; i++) {
+     let newLI = $('<li>A</li>');
+     newUL.append(newLI);
+    }
+
 
     // The cells can be represented inside the grid using <li> elements. 
 
