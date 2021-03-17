@@ -15,7 +15,7 @@ const Game = require('./solution/game.js');
 
     const game = new Game();
     let view = new View(game, tttClass);
-    
+    view.bindEvents();
     // let p = $('<p>Hello!</p>');
     // let body = $('body');
     // tttClass.append(p);

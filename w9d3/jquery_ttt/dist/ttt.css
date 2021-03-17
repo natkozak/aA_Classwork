@@ -1,7 +1,40 @@
-ul  {
+ul {
     display: flex;
-    width: 40px;
+    width: 400px;
     background-color: blue;
     flex-wrap: wrap;
     list-style: none;
+    
+
+}
+
+ul li {
+    background-color: grey;
+    display: list-item;
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+}
+
+ul li.played {
+    background-color: white;
+}
+
+ul li.x {
+    color: red;
+    font-size: 100px;
+    display: flex;
+    justify-content: safe center;
+    align-items: center;
+    /* flex: center; */
+}
+ul li.o {
+    color: yellow;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* flex: center; */
+
 }
