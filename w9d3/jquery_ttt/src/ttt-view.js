@@ -8,16 +8,26 @@ class View {
     // make a click event
     // when they click on an A, make that register as a move
     const li = $('li')
+
+    
+
     li.on('click', (e) => {
+      if (this.game.isOver()) {
+        $(() => alert(`${this.game.currentPlayer} has already won, please refresh page to play again!!`))
+      } else {
+        $(e.target).addClass('played');
+        this.game.playMove(this.makeMove($(e.target))); // change to $(e.target) here too
+        let p = $(`<p>${this.game.currentPlayer}</p>`)
+
+        //$(e.target).text(this.game.currentPlayer);
+        $(e.target).append(p);
+        $(e.target).addClass(`${this.game.currentPlayer}`);
+        if (this.game.isOver()) {
+          $(() => alert(`${this.game.currentPlayer} won!`))
+        }
+      }
       
-      $(e.target).addClass('played');
-      this.game.playMove(this.makeMove($(e.target))); // change to $(e.target) here too
-      $(e.target).text(this.game.currentPlayer);
-      $(e.target).addClass(`${this.game.currentPlayer}`);
-       if (this.game.isOver()) {
-         $(() => alert(`${this.game.currentPlayer} won!`)) 
-       }
-      
+     
     })
   }
 
