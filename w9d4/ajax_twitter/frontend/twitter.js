@@ -4,11 +4,15 @@ const FollowToggle = require('./follow_toggle')
 
 
 $(() => {
-  const buttons = $("follow-toggle");
+  const buttons = $(".follow-toggle");
   const buttons_arr = [];
   buttons.each((idx, ele) => {
     buttons_arr.push(new FollowToggle(ele));
+    // debugger
+    // console.log(buttons_arr);
   });
+
+
   
 
 });
