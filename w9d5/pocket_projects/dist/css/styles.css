@@ -15,11 +15,56 @@ h1 {
 .header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .welcome {
+  display: flex;
+  order: 2;
   font-weight: 400;
   margin-top: 100px;
+}
+
+.clock-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  color: white;
+  width: 200px;
+  height: 50px;
+  order: 1;
+}
+
+.drop-down-dog-nav {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  order: 3;
+}
+
+.drop-down-dog-list {
+  position: absolute;
+  display: block;
+  background-color: inherit;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 40px;
+}
+
+.dog-link {
+  display: none;
+  padding-bottom: 10px;
+}
+
+.open {
+  display: block;
 }
 
 /*  Phase 4: Slide In & Out Classes */
@@ -50,12 +95,4 @@ h1 {
 .slide.active {
   opacity: 1;
   transform: translateX(0%) scale(1);
-}
-
-.dog-link {
-  display: none;
-}
-
-.open {
-  display: block;
 }
