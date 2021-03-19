@@ -1,4 +1,11 @@
-<button class="follow-toggle" data-user-id="<%=user.id%>" data-initial-follow-state="<%=current_user.follows?(user)%>"></button>
+<% if current_user.follows?(user) %>
+<% state = 'followed' %>
+<% else %>
+<% state = 'unfollowed' %>
+<% end %>
+
+
+<button class="follow-toggle" data-user-id="<%=user.id%>" data-initial-follow-state="<%=state%>"></button>
 
 <!--Todo: maybe refactor so that we add the data attributes with Javascript instead of explicitly here.-->
 

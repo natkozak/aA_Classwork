@@ -1,55 +1,58 @@
+const FollowAPIUtil = require("./follow_api_util");
+
 class FollowToggle {
   constructor(el) {
     this.el = $(el);
     this.userId = this.el.data("user-id");
     this.followState = this.el.data("initial-follow-state");
     this.render();
+    this.handleClick();
   }
 
   render() {
-    if (this.followState) {
-      this.el.text('Unfollow!');
-      // this.followState = false;
-    }
-    else {
-      this.el.text('Follow!');
-      // this.followState = true;
+    // debugger
+    switch (this.followState) {
+      case 'following':
+        this.el.prop("disabled", true);
+        this.el.text('Following!');
+        break;
+      case 'unfollowing':
+        this.el.prop("disabled", true);
+        this.el.text('Unfollowing!');
+        break;
+      case 'followed':
+        this.el.prop("disabled", false);
+        this.el.text('Followed!');
+        break;
+      case 'unfollowed':
+        this.el.prop("disabled", false);
+        this.el.text('Unfollowed!');
+        break;
     }
   }
 
   handleClick() {
     this.el.on('click', (e) => {
-      debugger
+      // debugger
       e.preventDefault();
 
-      const followUser = function(userId) {
-        return $.ajax({
-          method: "POST",
-          url: `/users/${userId}/follow`, // userId will be defined later
-          dataType: 'json'
-        });
-      }
 
-      const unfollowUser = function(userId) {
-        return $.ajax({
-          method: "DELETE",
-          url: `/users/${userId}/follow`, // userId will be defined later
-          dataType: 'json'
-        });
-      }
-
-      if (this.followState) {
-        unfollowUser(this.userId) // this is an AJAX
+      if (this.followState === 'followed') { // following
+        this.followState = 'unfollowing';
+        this.render(); // disables the button and show that it's unfollowing
+        FollowAPIUtil.unfollowUser(this.userId) // this is an AJAX
         .then(() => {
-          this.followState = false;
-          this.render();
+          this.followState = 'unfollowed'; // unfollowing
+          this.render(); // enables the button and show that it's unfollowed
         })
       }
-      else {
-        followUser(this.userId) // this is also an AJAX
+      else if (this.followState === 'unfollowed') { // else if unfollowing
+        this.followState = 'following';
+        this.render(); // disables to show following
+        FollowAPIUtil.followUser(this.userId) // this is also an AJAX
         .then(() => {
-          this.followState = true;
-          this.render();
+          this.followState = 'followed'; // following
+          this.render(); // enables button to show followed
         })
       }
 
