@@ -1,3 +1,27 @@
 h1 {
   background-color: blue;
 }
+
+.board-div{
+  background-color: yellow;
+  display: flex;
+  margin: auto;
+}
+
+.mapped-tile{
+  border: solid black 1px;
+  background-color: darkgray;
+  border-style: dashed;
+}
+
+.mapped-row{
+}
+
+.U {
+  background-color: gray;
+  padding: 7px;
+}
+
+.tile{
+  border-style: outset;
+}

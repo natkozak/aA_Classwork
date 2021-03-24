@@ -45,35 +45,68 @@ var Board = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Board);
 
   function Board(props) {
+    var _this;
+
     _classCallCheck(this, Board);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.mapRow = _this.mapRow.bind(_assertThisInitialized(_this));
+    _this.mapTile = _this.mapTile.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Board, [{
     key: "render",
     value: function render() {
+      var board = this.props.board;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "tile-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tile__WEBPACK_IMPORTED_MODULE_1__.default, null));
+        className: "board-div"
+      }, this.mapRow());
     }
   }, {
-    key: "mapBoard",
-    value: function mapBoard() {
-      var _this = this;
+    key: "mapRow",
+    value: function mapRow() {
+      var _this2 = this;
 
-      var board = this.props.board;
-      var rows = board.grid.map(function (row, idx1) {
-        return rows.map(function (tile, idx2) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            key: "".concat(idx1, "-").concat(idx2)
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tile__WEBPACK_IMPORTED_MODULE_1__.default, {
-            board: board,
-            updateGame: _this.props.updateGame
-          }));
-        });
+      var board = this.props.board; // console.log('hello')
+
+      return board.grid.map(function (row, idx1) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "mapped-row",
+          key: "row-".concat(idx1)
+        }, _this2.mapTile(row, idx1));
       });
     }
+  }, {
+    key: "mapTile",
+    value: function mapTile(row, idx1) {
+      var _this3 = this;
+
+      var board = this.props.board;
+      return row.map(function (tile, idx2) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "mapped-tile",
+          key: "".concat(idx1, "-").concat(idx2)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tile__WEBPACK_IMPORTED_MODULE_1__.default, {
+          tile: tile,
+          board: board,
+          updateGame: _this3.props.updateGame
+        }));
+      });
+    } // mapRow(){
+    //   const board = this.props.board;
+    //   console.log('hello')
+    //   return board.grid.map((row, idx1) => {
+    //       return row.map((tile, idx2) => {
+    //       return (
+    //         <div key={`${idx1}-${idx2}`}>
+    //           <Tile board={board} updateGame={this.props.updateGame} />
+    //         </div>
+    //         ); 
+    //     });
+    //   });
+    // }
+
   }]);
 
   return Board;
@@ -136,9 +169,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       board: new _minesweeper__WEBPACK_IMPORTED_MODULE_2__.Board(9, 10)
     };
-
-    _this.updateGame.bind(_assertThisInitialized(_this));
-
+    _this.updateGame = _this.updateGame.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -208,16 +239,42 @@ var Tile = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(Tile);
 
-  function Tile() {
+  function Tile(props) {
+    var _this;
+
     _classCallCheck(this, Tile);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.board = _this.props.board;
+    _this.grid = _this.props.board.grid;
+    return _this;
   }
 
   _createClass(Tile, [{
     key: "render",
     value: function render() {
-      return "T";
+      var tile = this.props.tile;
+      var status = '';
+      var renderedStatus = '';
+
+      if (tile.bombed && tile.explored) {
+        status = 'B';
+        renderedStatus = 'B';
+      } else if (tile.flagged && !tile.explored) {
+        status = 'F';
+        renderedStatus = 'F';
+      } else if (tile.explored) {
+        var count = tile.adjacentBombCount();
+        status = 'E';
+        renderedStatus = count ? "".concat(count) : '_';
+      } else {
+        status = 'U';
+        renderedStatus = 'U';
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "".concat(status, " tile")
+      }, renderedStatus);
     }
   }]);
 
