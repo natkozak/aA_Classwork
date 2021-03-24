@@ -38,8 +38,16 @@ class Clock extends React.Component {
         <h1>Matt and Nat's Cool Clock</h1>
 
         <div className="clock-box">
-          <p className="time-header">Time: </p><p className="time">{time}</p>
-          <p className="date-header">Date: </p><p className="date">{dayMonthYear}</p>
+          <div className="time-box">
+            <p className="time-header">Time: </p>
+            <p className="time">{time}</p>
+          </div>
+
+          <div className="date-box">
+            <p className="date-header">Date: </p>
+            <p className="date">{dayMonthYear}</p>
+          </div>
+          
         </div>
         
       </div>

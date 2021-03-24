@@ -1,5 +1,7 @@
 h1 {
-    background-color: blue;
+    /* background-color: blue; */
+    font-family: Open Sans;
+
 }
 
 body {
@@ -8,32 +10,52 @@ body {
 }
 
 .clock-header-and-box {
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     width: 500px;
-
 }
 
 
 .clock-box{
     background-color: orange;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
 }
 
+.time-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: xx-large;
+    font-family: Orbitron;
+}
 
 .time-header{
-    background-color: green;
+    /* background-color: green; */
 }
 
 .time{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 .date-header{
-    background-color: purple;
+    /* background-color: purple; */
 }
 
 .date{
-    background-color: pink;
+    /* background-color: pink; */
 }
