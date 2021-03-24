@@ -8,23 +8,41 @@ class Clock extends React.Component {
       date: new Date()
     };
 
+    this.tick = this.tick.bind(this);
+
   }
 
   tick(){
+    console.log(this);
     const tickDate = new Date();
     this.setState({date: tickDate});
   }
 
   componentDidMount(){
+    this.tickid = setInterval(this.tick, 1000);
+  }
 
+  componentWillUnmount(){
+    clearInterval(this.tickid);
   }
 
   render(){
     // give the clock a title in an h1 tag and check that this renders correctly on the page
-    let hours = this.state[date].getHours();
-    let parsed = this.state[date].parse();
+    let hours = this.state.date.getHours();
+    let time = this.state.date.toLocaleTimeString();
+    let dayMonthYear = this.state.date.toDateString();
     return (
-      <h1>Matt and Nat's Cool Clock: {parsed}</h1>
+   
+      <div className="clock-header-and-box"> 
+
+        <h1>Matt and Nat's Cool Clock</h1>
+
+        <div className="clock-box">
+          <p className="time-header">Time: </p><p className="time">{time}</p>
+          <p className="date-header">Date: </p><p className="date">{dayMonthYear}</p>
+        </div>
+        
+      </div>
     )
   }
 }

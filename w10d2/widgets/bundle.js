@@ -51,12 +51,14 @@ var Clock = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       date: new Date()
     };
+    _this.tick = _this.tick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Clock, [{
     key: "tick",
     value: function tick() {
+      console.log(this);
       var tickDate = new Date();
       this.setState({
         date: tickDate
@@ -64,14 +66,34 @@ var Clock = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      this.tickid = setInterval(this.tick, 1000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.tickid);
+    }
   }, {
     key: "render",
     value: function render() {
       // give the clock a title in an h1 tag and check that this renders correctly on the page
-      var hours = this.state[date].getHours();
-      var parsed = this.state[date].parse();
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Matt and Nat's Cool Clock: ", parsed);
+      var hours = this.state.date.getHours();
+      var time = this.state.date.toLocaleTimeString();
+      var dayMonthYear = this.state.date.toDateString();
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "clock-header-and-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Matt and Nat's Cool Clock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "clock-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "time-header"
+      }, "Time: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "time"
+      }, time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "date-header"
+      }, "Date: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "date"
+      }, dayMonthYear)));
     }
   }]);
 

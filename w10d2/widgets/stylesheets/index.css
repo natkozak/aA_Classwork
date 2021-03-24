@@ -1,0 +1,39 @@
+h1 {
+    background-color: blue;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.clock-header-and-box {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+
+.clock-box{
+    background-color: orange;
+    display: flex;
+}
+
+
+.time-header{
+    background-color: green;
+}
+
+.time{
+    background-color: greenyellow;
+}
+
+.date-header{
+    background-color: purple;
+}
+
+.date{
+    background-color: pink;
+}
