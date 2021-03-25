@@ -170,24 +170,70 @@ var Game = /*#__PURE__*/function (_React$Component) {
       board: new _minesweeper__WEBPACK_IMPORTED_MODULE_2__.Board(9, 10)
     };
     _this.updateGame = _this.updateGame.bind(_assertThisInitialized(_this));
+    _this.restartGame = _this.restartGame.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Game, [{
+    key: "updateGame",
+    value: function updateGame(tileObj, _boolean) {
+      var board = this.state.board;
+
+      if (_boolean) {
+        tileObj.toggleFlag();
+      } else {
+        tileObj.explore();
+      }
+
+      this.setState({
+        board: this.state.board
+      }); // if (board.won()) {
+      //   alert("You Won!")
+      // } else if (board.lost()) {
+      //   alert("You Lose!")
+      // }
+    }
+  }, {
+    key: "restartGame",
+    value: function restartGame() {
+      this.setState({
+        board: new _minesweeper__WEBPACK_IMPORTED_MODULE_2__.Board(9, 10)
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       // returns a new react component, Board, passing in this.state.board and this.updateGame as props
       var board = this.state.board;
+      var modal = "";
+
+      if (this.state.board.lost()) {
+        var lostText = "You Lost! (This is a modal)";
+        modal = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "modal-screen"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "modal-content"
+        }, lostText, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+          type: "submit",
+          onClick: this.restartGame
+        }, "Restart Game?"))); // modal screen outside the modal content
+        // two different classes 
+      } else if (this.state.board.won()) {
+        var wonText = "You Won! (This is a modal)";
+        modal = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "modal-screen"
+        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "modal-content"
+        }, wonText), " ");
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "board-div"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_board__WEBPACK_IMPORTED_MODULE_1__.default, {
+      }, modal, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_board__WEBPACK_IMPORTED_MODULE_1__.default, {
         board: board,
         updateGame: this.updateGame
       }));
     }
-  }, {
-    key: "updateGame",
-    value: function updateGame() {}
   }]);
 
   return Game;
@@ -245,12 +291,24 @@ var Tile = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Tile);
 
     _this = _super.call(this, props);
-    _this.board = _this.props.board;
-    _this.grid = _this.props.board.grid;
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
-  }
+  } // where does handleClick get the "e" from (if given to an event listener?)
+  // in the onClick event listener defined on the window, an argument "e" is passed into whatever callback you give the event listener
+
 
   _createClass(Tile, [{
+    key: "handleClick",
+    value: function handleClick(e) {
+      console.log(this.props.tile);
+
+      if (e.altKey) {
+        this.props.updateGame(this.props.tile, true);
+      } else {
+        this.props.updateGame(this.props.tile, false);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var tile = this.props.tile;
@@ -266,15 +324,21 @@ var Tile = /*#__PURE__*/function (_React$Component) {
       } else if (tile.explored) {
         var count = tile.adjacentBombCount();
         status = 'E';
-        renderedStatus = count ? "".concat(count) : '_';
+        renderedStatus = count ? "".concat(count) : ' ';
       } else {
         status = 'U';
         renderedStatus = 'U';
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "".concat(status, " tile")
-      }, renderedStatus);
+      return (
+        /*#__PURE__*/
+        // onClick is an event listener: 
+        // similar to element.addEventListener("click", this.handleClick)
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "".concat(status, " tile"),
+          onClick: this.handleClick
+        }, renderedStatus)
+      );
     }
   }]);
 
