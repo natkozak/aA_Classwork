@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 
 import { receiveTodos, receiveTodo, removeTodo } from './actions/todo_actions';
+import { receiveSteps, receiveStep, removeStep } from './actions/step_actions';
 
 
 console.log("Webpack is working!")
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.receiveTodos = receiveTodos;
   window.receiveTodo = receiveTodo;
   window.removeTodo = removeTodo;
+  window.receiveStep = receiveStep;
+  window.receiveSteps = receiveSteps;
+  window.removeStep = removeStep;
 
   ReactDOM.render(hello, root);
 })
