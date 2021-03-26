@@ -4,7 +4,8 @@ import configureStore from './store/store.js';
 
 import { receiveTodos, receiveTodo, removeTodo } from './actions/todo_actions';
 import { receiveSteps, receiveStep, removeStep } from './actions/step_actions';
-
+import Root from "./components/root.jsx";
+import { allTodos } from "./reducers/selectors.js";
 
 console.log("Webpack is working!")
 
@@ -21,8 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.receiveStep = receiveStep;
   window.receiveSteps = receiveSteps;
   window.removeStep = removeStep;
+  window.allTodos = allTodos;
 
-  ReactDOM.render(hello, root);
+  ReactDOM.render(<Root store={store}/>, root);
 })
 
 // Set up your entry file todo_redux.jsx to render <h1>Todos App</h1> into your root page's #content container.
