@@ -6,7 +6,12 @@ class TodoList extends React.Component {
   render() {
     console.log(this.props);
     const items = this.props.todos.map(todo => {
-      return <TodoListItem todo={todo} key={todo.id}/>
+      return <TodoListItem 
+        todo={todo} 
+        key={todo.id} 
+        receiveTodo={this.props.receiveTodo}
+        removeTodo={this.props.removeTodo}
+      />
     })
     return (
       <div>I am a Todo List
