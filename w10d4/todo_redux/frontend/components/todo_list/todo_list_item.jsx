@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TodoDetailView from './../todo_detail/todo_detail_view';
 
 class TodoListItem extends React.Component {
   constructor(props) {
@@ -9,17 +9,11 @@ class TodoListItem extends React.Component {
     this.markDone = this.markDone.bind(this);
     this.markUndone = this.markUndone.bind(this);
     this.removeItem = this.removeItem.bind(this);
+
+    this.detail = false;
+    
   }
 
-  // toggleDone(e) {
-  //   e.preventDefault();
-  //   console.log(this.props.todo.done);
-  //   if (this.props.todo.done) {
-  //     this.setState({done: false})
-  //   } else {
-  //     this.setState({done: true})
-  //   }
-  // }
   
   markDone(e) {
     e.preventDefault();
@@ -43,12 +37,11 @@ class TodoListItem extends React.Component {
   render () {
     return (
       <li>
-        {this.props.todo.title}
-        {this.props.todo.body}
-        {this.props.todo.done}
-        <button type="submit" onClick={this.removeItem}>
+        <div>{this.props.todo.title}</div>
+        <TodoDetailView todo={this.props.todo} removeTodo={this.props.removeTodo}/>
+        {/* <button type="submit" onClick={this.removeItem}>
           Remove Todo
-        </button>
+        </button> */}
         <button type="submit" onClick={this.markDone}>
           Mark Done
         </button>
