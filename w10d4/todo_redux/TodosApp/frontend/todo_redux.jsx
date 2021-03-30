@@ -6,7 +6,7 @@ import { receiveTodos, receiveTodo, removeTodo } from './actions/todo_actions';
 import { receiveSteps, receiveStep, removeStep } from './actions/step_actions';
 import Root from "./components/root.jsx";
 import { allTodos } from "./reducers/selectors.js";
-import { fetchTodos } from './util/todo_api_util.js';
+import { fetchTodos, createTodo, deleteTodo, updateTodo } from './util/todo_api_util.js';
 
 console.log("Webpack is working!")
 
@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.removeStep = removeStep;
   window.allTodos = allTodos;
   window.fetchTodos = fetchTodos;
+  window.createTodo = createTodo;
+  window.deleteTodo = deleteTodo;
+  window.updateTodo = updateTodo;
+
 
   ReactDOM.render(<Root store={store}/>, root);
 })
