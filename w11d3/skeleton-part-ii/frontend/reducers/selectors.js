@@ -7,6 +7,10 @@ export const selectPokemonDetails = (state) => {
 }
 
 export const selectPokemonMoves = (state) => {
-  return Object.values(state.entities.pokemon)
+  return Object.values(state.entities.pokemon.moves)
+}
+
+export const selectPokemonItems = (state) => {
+  return Object.values(state.entities.pokemon.items)
 }
 
