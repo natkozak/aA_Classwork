@@ -1,0 +1,675 @@
+Started GET "/" for ::1 at 2021-04-01 14:07:30 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "BenchBnb_development" does not exist
+):
+  
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.5) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.5) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.5) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-01 14:07:33 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "BenchBnb_development" does not exist
+):
+  
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.5) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.5) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.5) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (616.5ms)[0m  [1m[35mCREATE DATABASE "BenchBnb_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (206.6ms)[0m  [1m[35mCREATE DATABASE "BenchBnb_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (89.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5478404350628861085)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210401211527)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (34.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210401211527_create_users.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20210401211527_create_users.rb:10
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20210401211527_create_users.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210401211527"]]
+  ↳ bin/rails:9
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-01 21:21:04.546188"], ["updated_at", "2021-04-01 21:21:04.546188"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5478404350628861085)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-04-01 14:31:00 -0700
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nkozak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.1ms)
+Completed 200 OK in 8159ms (Views: 8147.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 14:42:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.9ms)
+Completed 200 OK in 252ms (Views: 237.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2021-04-01 14:49:12 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/users" for ::1 at 2021-04-01 15:03:58 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bb@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nkozak/Desktop/aA/aA_Classwork/w11d4/BenchBnb/app/models/user.rb:41: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/user.rb:41: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/api/users_controller.rb:3:in `create'
+Started POST "/api/users" for ::1 at 2021-04-01 15:05:19 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bb@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 58.1ms)
+
+
+  
+NameError (uninitialized constant User::BCrypt):
+  
+app/models/user.rb:20:in `password='
+app/controllers/api/users_controller.rb:3:in `create'
+Started POST "/api/users" for ::1 at 2021-04-01 15:06:45 -0700
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nkozak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bb@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 534ms (ActiveRecord: 17.1ms)
+
+
+  
+NoMethodError (undefined method `username' for #<User:0x00007ff29ebbdb20>):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/users" for ::1 at 2021-04-01 15:09:46 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nkozak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bb@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (24.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bb@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bb@gmail.com"], ["password_digest", "$2a$12$Vy8.Rz.LMqNw6MvEIx7h7u3eaXWOnVhN6oRAX85a/QLWNWblrpHaC"], ["session_token", "OvuBu_E5g5txB4vX-GQwPQ"], ["created_at", "2021-04-01 22:09:47.326888"], ["updated_at", "2021-04-01 22:09:47.326888"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 200 OK in 524ms (Views: 2.8ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 15:18:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (3.9ms)
+Completed 200 OK in 4958ms (Views: 4924.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 15:22:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (4.1ms)
+Completed 200 OK in 181ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 15:25:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.8ms)
+Completed 200 OK in 134ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 15:26:10 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bb@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (5.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bb@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 475ms (Views: 0.3ms | ActiveRecord: 71.1ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 15:27:26 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"aa@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "aa@gmail.com"], ["password_digest", "$2a$12$3Nu1KeEgGfJNyr/w8sjhIOIAhKT/YAOfkBucDSE1z5m9eu/G8/Eym"], ["session_token", "2jeNwgdOGx37S8YHSAZw5Q"], ["created_at", "2021-04-01 22:27:26.458196"], ["updated_at", "2021-04-01 22:27:26.458196"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 200 OK in 380ms (Views: 0.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 15:30:28 -0700
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nkozak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (4.4ms)
+Completed 200 OK in 8551ms (Views: 8534.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users" for ::1 at 2021-04-01 15:34:22 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nkozak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2021-04-01 15:35:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:35:47 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 253ms (Views: 40.2ms | ActiveRecord: 151.6ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:36:44 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 52ms (Views: 33.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:37:25 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 61ms (Views: 39.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:38:44 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (19.7ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<User:0x00007fe5cf307930>):
+    1: json.users do
+    2:   @user.each do 
+    3:     json.extract! @user, :id, :email
+    4:   end
+    5: end
+  
+app/views/api/users/show.json.jbuilder:2:in `block in _app_views_api_users_show_json_jbuilder___3405605086066600788_70312500142780'
+app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder___3405605086066600788_70312500142780'
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:39:02 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 58ms (Views: 38.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2021-04-01 15:39:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:39:57 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 62ms (Views: 35.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 15:40:57 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 49ms (Views: 33.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 16:06:51 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 48ms (Views: 32.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "//api/users/1" for ::1 at 2021-04-01 16:11:47 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 62ms (Views: 44.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:11:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.8ms)
+Completed 200 OK in 7877ms (Views: 7865.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:16:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.7ms)
+Completed 200 OK in 1172ms (Views: 1157.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:17:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 198ms (Views: 187.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:17:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 1237ms (Views: 1230.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:17:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 1356ms (Views: 1345.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:18:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 1207ms (Views: 1194.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:19:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 993ms (Views: 981.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:19:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 101ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:19:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.6ms)
+Completed 200 OK in 1134ms (Views: 1121.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 16:20:23 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :user
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 44ms (Views: 0.2ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 16:20:36 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user"=>{"email"=>"ee@gmail.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :user
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 11ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 16:20:46 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user"=>{"email"=>"ff@gmail.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :user
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (5.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 17ms (Views: 0.6ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 16:21:14 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"ff@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ff@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ff@gmail.com"], ["password_digest", "$2a$12$I.imWPKfZzFfDQOzBXWKN.xhnJv8w5I7CNxXbsTN276.J9ikCPR46"], ["session_token", "oXJOQ9jyFb4CExoVgc33HA"], ["created_at", "2021-04-01 23:21:14.521022"], ["updated_at", "2021-04-01 23:21:14.521022"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 399ms (Views: 14.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:57:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (12.8ms)
+Completed 200 OK in 455ms (Views: 422.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:57:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.7ms)
+Completed 200 OK in 119ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:57:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 128ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 16:59:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.7ms)
+Completed 200 OK in 3095ms (Views: 3078.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 17:00:25 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"ff@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ff@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 420ms (Views: 0.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 17:17:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.0ms)
+Completed 200 OK in 1168ms (Views: 1158.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-01 17:32:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.8ms)
+Completed 200 OK in 1030ms (Views: 1020.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-04-01 17:33:20 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"ff@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ff@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 357ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
