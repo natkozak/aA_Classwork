@@ -673,3 +673,10 @@ Processing by Api::UsersController#create as JSON
 Completed 401 Unauthorized in 357ms (Views: 0.2ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/" for ::1 at 2021-04-01 18:51:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (2.4ms)
+Completed 200 OK in 741ms (Views: 729.5ms | ActiveRecord: 0.0ms)
+
+
