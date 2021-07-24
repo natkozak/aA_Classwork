@@ -7,10 +7,22 @@ const mapSTP = state => ({
 });
 
 const Auth = ({ loggedIn, path, component: Component }) => (
-  <Route path={path} render={props => (
-    loggedIn ? <Redirect to="/" /> : <Component {...props} />
-  )}
+  <Route 
+    path={path} 
+    render={props => (
+      loggedIn ? <Redirect to="/" /> : <Component {...props} />
+    )}
   />
 );
 
-export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+const Protected = ({ loggedIn, path, component: Component}) => (
+  <Route
+    path={path}
+    render={props => (
+      loggedIn ?  <Component {...props} /> : <Redirect to="/signup" />
+    )}
+  />
+);
+
+export const AuthRoute = withRouter(connect(mapSTP)(Auth));
+export const ProtectedRoute = withRouter(connect(mapSTP)(Protected));

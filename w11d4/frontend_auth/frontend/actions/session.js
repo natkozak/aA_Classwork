@@ -1,11 +1,11 @@
-import { postUser, deleteSession, postSession } from '../utils/session';
+import { createUser, deleteSession, createSession } from '../utils/session';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 
 const receiveCurrentUser = user => ({
   type: RECEIVE_CURRENT_USER,
-  user,
+  user
 });
 
 const logoutCurrentUser = () => ({
@@ -13,10 +13,10 @@ const logoutCurrentUser = () => ({
 });
 
 // thunk action creator
-export const createNewUser = formUser => dispatch => postUser(formUser)
+export const createNewUser = formUser => dispatch => createUser(formUser)
   .then(user => dispatch(receiveCurrentUser(user)));
 
-export const login = formUser => dispatch => postSession(formUser)
+export const login = formUser => dispatch => createSession(formUser)
   .then(user => dispatch(receiveCurrentUser(user)));
 
 export const logout = () => dispatch => deleteSession()
